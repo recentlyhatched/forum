@@ -1,0 +1,137 @@
+/* Global reset */
+body {
+  font-family: sans-serif;
+  margin: 0;
+  padding: 0;
+  background: #f7f7f7;
+  color: #333;
+}
+
+header, nav, main, aside, section, article, form {
+  padding: 1rem;
+}
+
+header {
+  background: #004d80;
+  color: #fff;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 1.5rem;
+}
+
+nav {
+  margin-top: .5rem;
+}
+
+nav a, nav span {
+  margin-right: 1rem;
+  color: #fff;
+  text-decoration: none;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+aside {
+  background: #eee;
+  padding: 1rem;
+}
+
+aside ul {
+  list-style: none;
+  padding: 0;
+}
+
+aside li {
+  margin: .25rem 0;
+}
+
+main {
+  padding: 1rem;
+}
+
+.post {
+  background: #fff;
+  margin: 1rem 0;
+  padding: 1rem;
+  border-radius: 8px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+
+.comment {
+  background: #fafafa;
+  border-left: 3px solid #ccc;
+  margin: .5rem 0;
+  padding: .5rem 1rem;
+  border-radius: 4px;
+}
+
+.meta {
+  font-size: .85rem;
+  color: #666;
+}
+
+.likes {
+  margin-top: .5rem;
+  font-size: .9rem;
+}
+
+.form-card {
+  background: #fff;
+  padding: 1rem;
+  margin: 1rem 0;
+  border-radius: 6px;
+  box-shadow: 0 1px 2px rgba(0,0,0,0.1);
+  display: flex;
+  flex-direction: column;
+  gap: .5rem;
+}
+
+.form-card label {
+  display: flex;
+  flex-direction: column;
+  font-weight: bold;
+}
+
+input[type=text],
+input[type=email],
+input[type=password],
+textarea,
+select {
+  padding: .5rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+textarea {
+  resize: vertical;
+  min-height: 80px;
+}
+
+button {
+  padding: .5rem 1rem;
+  background: #004d80;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #0066aa;
+}
+
+.inline-form {
+  display: inline;
+}
+
+.inline-form button {
+  padding: 0 .5rem;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  font-size: 1rem;
+}

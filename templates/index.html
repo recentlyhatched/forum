@@ -1,10 +1,25 @@
-<!-- templates/index.html -->
 <!doctype html>
-<html><head><meta charset="utf-8"><title>Forum</title></head><body>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Forum</title>
+  <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
 <header>
-  <h1>Simple Forum</h1>
-  {{if .User}}Hello {{.User.Username}} | <a href="/logout">Logout</a> | <a href="/post/create">Create post</a>{{else}}<a href="/login">Login</a> | <a href="/register">Register</a>{{end}}
-  <hr/>
+  <h1>Forum</h1>
+  <nav>
+    {{if .User}}
+      <span>Hi, {{.User.Username}}</span>
+      <a href="/logout">Logout</a>
+      <a href="/post/create">New Post</a>
+      <a href="/filter?mine=1">My Posts</a>
+      <a href="/filter?liked=1">Liked Posts</a>
+    {{else}}
+      <a href="/login">Login</a>
+      <a href="/register">Register</a>
+    {{end}}
+  </nav>
 </header>
 
 <aside>
@@ -17,15 +32,16 @@
 </aside>
 
 <main>
-  <h2>Recent posts</h2>
+  <h2>Recent Posts</h2>
   {{range .Posts}}
-    <article>
+    <article class="post">
       <h3><a href="/post/{{.ID}}">{{.Title}}</a></h3>
-      <p>By {{.Author}} at {{.Created}}</p>
+      <p class="meta">By {{.Author}} at {{.CreatedAt}}</p>
       <p>{{.Body}}</p>
     </article>
   {{else}}
     <p>No posts yet.</p>
   {{end}}
 </main>
-</body></html>
+</body>
+</html>

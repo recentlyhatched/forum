@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Posts by Category</title>
+  <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+<header><h1>Posts in this Category</h1></header>
+<main>
+  {{range .}}
+    <article class="post">
+      <h3><a href="/post/{{.ID}}">{{.Title}}</a></h3>
+      <p>{{.Body}}</p>
+    </article>
+  {{else}}
+    <p>No posts found in this category.</p>
+  {{end}}
+</main>
+</body>
+</html>
