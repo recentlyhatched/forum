@@ -1,3 +1,5 @@
+## Deployed with AWS: [http://forumapp-env.eba-j6cnhiaw.eu-west-2.elasticbeanstalk.com/](http://forumapp-env.eba-j6cnhiaw.eu-west-2.elasticbeanstalk.com/)
+
 ChromeOS only (Linux - debian)
 Install Docker from docker.io
 
