@@ -13,8 +13,8 @@ Run `sudo docker build -t forum .`
 
 Then run `sudo docker run -p 8080:8080 -v $(pwd)/data:/data forum`
 
+Then go to [http://penguin.linux.test:8080/](http://penguin.linux.test:8080/)
+
 2. To compile and run with Go
 Run `go run main.go`
-
-Commands for audit
 
