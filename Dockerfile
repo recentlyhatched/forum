@@ -13,8 +13,10 @@ WORKDIR /app
 COPY --from=build /app/forum /app/forum
 COPY templates /app/templates
 COPY static /app/static
-# Persist DB to a volume (or create empty)
 VOLUME ["/data"]
 ENV DB_PATH=/data/forum.db
-# Use a small wrapper to create db if missing, but our binary auto-creates schema if DB present
+
+# <<< ADD THIS LINE
+EXPOSE 8080
+
 CMD ["./forum"]
